@@ -30,8 +30,11 @@ yarn-error.*
 .DS_Store
 *.pem
 
-# local env files
-.env*.local
+# local env files — never commit Firebase env values
+.env
+.env.local
+.env.*.local
+!.env.example
 
 # typescript
 *.tsbuildinfo
@@ -39,3 +42,6 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# captured evidence binaries stay local until selected for submission
+Screenshot/*.tmp
